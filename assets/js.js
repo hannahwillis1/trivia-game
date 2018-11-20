@@ -20,11 +20,11 @@ $(document).ready(function() {
       var fourname = "4";
       var fivename = "5";
       var sixname = "6";
-      var sevename = "7";
+      var sevenname = "7";
       var eightname = "8";
       var ninename = "9";
       var tenname = "10";
-      var elevenname = "None";
+      var elevename = "None";
 
       var one = $("input[@name=q1]:checked").val() != "a";
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
       var ten = $("input[@name=q10]:checked").val() != "b";
 
-      var one1 =
+      var oneonename =
         !one &&
         !two &&
         !three &&
@@ -57,47 +57,47 @@ $(document).ready(function() {
         !eight &&
         !nine &&
         !ten;
-      var categories = [];
+      var movies = [];
 
       if (one) {
-        categories.push(onename);
+        movies.push(onename);
       }
       if (two) {
-        categories.push(twoname);
+        movies.push(twoname);
       }
       if (three) {
-        categories.push(threename);
+        movies.push(threename);
       }
       if (four) {
-        categories.push(fourname);
+        movies.push(fourname);
       }
       if (five) {
-        categories.push(fivename);
+        movies.push(fivename);
       }
       if (six) {
-        categories.push(sixname);
+        movies.push(sixname);
       }
       if (seven) {
-        categories.push(sevenname);
+        movies.push(sevenname);
       }
       if (eight) {
-        categories.push(eightname);
+        movies.push(eightname);
       }
       if (nine) {
-        categories.push(ninename);
+        movies.push(ninename);
       }
       if (ten) {
-        categories.push(tenname);
+        movies.push(tenname);
       }
       if (eleven) {
-        categories.push(elevename);
+        movies.push(elevename);
       }
 
-      var catStr =
+      var Wrong =
         "You answered the following questions incorrectly: " +
-        categories.join(", ") +
+        movies.join(", ") +
         "";
-      $("#categorylist").text(catStr);
+      $("#categorylist").text(Wrong);
       $("#categorylist").show("slow");
 
       if (one) {
