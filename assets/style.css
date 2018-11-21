@@ -65,13 +65,22 @@ button {
   margin-right: auto;
   text-align: left;
 }
-#submit,
-#results,
-#restart,
+#submit {
+  display: none;
+}
+
+#results {
+  display: none;
+}
+
+#retry {
+  display: none;
+}
+/* 
 .question,
 .answers {
   display: none;
-}
+} */
 
 .how-to-play {
   font-size: 20px;
