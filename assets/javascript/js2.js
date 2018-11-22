@@ -4,7 +4,7 @@ $(document).ready(function() {
     alert("Get ready!");
     $("#start").on("click", start);
     $("#submit").on("click", finish);
-    $("#restart").on("click", restart);
+    $("#retry").on("click", restart);
 
     function start() {
       counter = setInterval(timer, 2000);
@@ -13,12 +13,12 @@ $(document).ready(function() {
       showMe("#submit");
       hideMe("#start");
       hideMe(".how-to-play");
-      hideMe("#restart");
-      hideMe("#results");
+      hideMe("#retry");
+      hideMe("#responses");
     }
     function timer() {
       number--;
-      $("#show-number").html("<h2>" + number + "</h2>");
+      $("#responsesRevealed").html("<h2>" + number + "</h2>");
       if (number === 0) {
         alert("Sorry - you're out of time!!");
         stop();
@@ -26,8 +26,8 @@ $(document).ready(function() {
     }
     function stop() {
       clearInterval(counter);
-      $("#results").show();
-      $("#restart").show();
+      $("#responses").show();
+      $("#retry").show();
       $(".question").hide();
       $(".answers").hide();
       $("#submit").hide();
@@ -42,14 +42,5 @@ $(document).ready(function() {
       number = 60;
       start();
     }
-
-    function hideMe(e) {
-      $(e).hide();
-    }
-    function showMe(e) {
-      $(e).show();
-    }
-
-    start();
   });
 });

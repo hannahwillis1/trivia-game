@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#results").click(function() {
+  $("#reponses").click(function() {
     if (
       !$("input[@name=q1]:checked").val() ||
       !$("input[@name=q2]:checked").val() ||
@@ -12,7 +12,7 @@ $(document).ready(function() {
       !$("input[@name=q9]:checked").val() ||
       !$("input[@name=q10]:checked").val()
     ) {
-      alert("You're not done yet!");
+      alert("Wrong-o!");
     } else {
       var onename = "1";
       var twoname = "2";
